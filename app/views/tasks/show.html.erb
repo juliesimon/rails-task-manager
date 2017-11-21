@@ -1,0 +1,23 @@
+<h1><%= @task.title %></h1>
+
+<h3><%= @task.details %></h3>
+
+
+<% if @task.completed %>
+  <div class="task-list small">
+    This task is completed
+  </div>
+<% else %>
+  <div class="task-list small">
+    This task is not completed yet
+  </div>
+<% end %>
+
+
+<div>
+  <%= link_to "Update task", edit_task_path(@task), class: 'btn btn-primary' %>
+</div>
+
+<div>
+  <%= link_to "Back to homepage", tasks_path %>
+</div>
